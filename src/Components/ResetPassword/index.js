@@ -34,6 +34,7 @@ const ResetPassword = () => {
                     <input type="password" className="form-control" id="password" value={userData.password} placeholder="Password" onChange={(e) => setUserData({...userData, password: e.target.value})} />
                 </div>
                 <button type="submit" className="btn btn-primary">Reset</button>
+                
             </form>
         </div>
     )

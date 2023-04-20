@@ -15,20 +15,24 @@ const Header = () => {
     }
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <a className="navbar-brand" href="#">Email App</a>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-            </button>
-
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <button onClick={handleLogout}>
-                    Login/Logout
-                </button>
+        <nav className="navbar navbar-inverse">
+        <div className="container-fluid">
+          <div className="navbar-header">
+            <a className="navbar-brand" href="#"><h2>Bulk Email Tool</h2></a>
+          </div>
+          <ul className="nav navbar-nav">
+            <li className="active"><a href="#">Home</a></li>
+          
+          </ul>
+          <ul className="nav navbar-nav navbar-right">
+            <li><a href="/register"><span className="glyphicon glyphicon-user"></span> Register</a></li>
+            <li><a href="/login"><span className="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+            <div className="nav navbar-nav navbar-right">
+            <button onClick={handleLogout}>Logout</button>
             </div>
-            
-        
-            </nav>
+        </div>
+      </nav>
     )
 }
 

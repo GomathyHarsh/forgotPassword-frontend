@@ -6,7 +6,7 @@ const PrivateRoutes = ({children,...rest}) => {
    const {user} = useContext(UserContext)
    if(!user){
   
-    return <div>loading...</div>
+    return <div>Welcome To Bulk Email Tool</div>
    }
 return(
     user ? <Outlet/> :<Navigate to='/login' />

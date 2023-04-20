@@ -35,30 +35,60 @@ const Register = () =>{
      }
     }
     return(
-        <div>
-            <div>Register an User</div>
-            <h3>User Register</h3>
-        <form onSubmit={handleRegisteration}>
-<div className="form-group">
-<label>Email address:</label>
-<input type="email" className="form-control" id="email" value={userDetails.email}  placeholder="Enter email" onChange={(e) => handleForm({email:e.target.value})}/>
-
-</div>
-<div className="form-group">
-                    <label>Name: </label>
-                    <input type="text" className="form-control" id="name" value={userDetails.name} placeholder="Enter name" onChange={(e) => handleForm({name: e.target.value})} />
+        <section className="vh-100 bg-image">
+        <div className="mask d-flex align-items-center h-100 gradient-custom-3">
+          <div className="container h-100">
+            <div className="row d-flex justify-content-center align-items-center h-100">
+              <div className="col-12 col-md-9 col-lg-7 col-xl-6">
+                <div className="card" >
+                  <div className="card-body p-5">
+                    <h2 className="text-uppercase text-center mb-5">Create an account</h2>
+      
+                    <form onSubmit={handleRegisteration}>
+      
+                      <div className="form-outline mb-4">
+                        <input type="text" id="form3Example1cg" value={userDetails.name} className="form-control form-control-lg"
+                        onChange={(e) => handleForm({name: e.target.value})} />
+                        <label className="form-label" for="form3Example1cg">Your Name</label>
+                      </div>
+      
+                      <div className="form-outline mb-4">
+                        <input type="email" id="form3Example3cg" value={userDetails.email}  className="form-control form-control-lg"
+                        onChange={(e) => handleForm({email: e.target.value})} />
+                        <label className="form-label" for="form3Example3cg">Your Email</label>
+                      </div>
+      
+                      <div className="form-outline mb-4">
+                        <input type="password" id="form3Example4cg" value={userDetails.mobileNumber} className="form-control form-control-lg" 
+                        onChange={(e) => handleForm({mobileNumber: e.target.value})}/>
+                        <label className="form-label" for="form3Example4cg">Phone No</label>
+                      </div>
+      
+                      <div className="form-outline mb-4">
+                        <input type="password" id="form3Example4cdg" value={userDetails.password} className="form-control form-control-lg" 
+                        onChange={(e) => handleForm({password:e.target.value})}/>
+                        <label className="form-label" for="form3Example4cdg">Password</label>
+                      </div>
+      
+                     
+      
+                      <div className="d-flex justify-content-center">
+                        <button type="submit"
+                          className="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+                      </div>
+      
+                      <p className="text-center text-muted mt-5 mb-0">Have already an account? <a href="/login"
+                          className="fw-bold text-body"><u>Login here</u></a></p>
+      
+                    </form>
+      
+                  </div>
                 </div>
-<div className="form-group">
-<label>Password</label>
-<input type="password" className="form-control" id="password" value={userDetails.password} placeholder="Password"  onChange={(e) => handleForm({password:e.target.value})}/>
-</div>
-<div className="form-group">
-                    <label>Mobile Number: </label>
-                    <input type="text" className="form-control" id="mobileNumber" value={userDetails.mobileNumber} placeholder="Enter mobile number" onChange={(e) => handleForm({mobileNumber: e.target.value})} />
-                </div>
-<button type="submit" className="btn btn-primary">Register</button>
-</form>
-    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     )
 }
 

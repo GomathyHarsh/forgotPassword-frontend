@@ -31,7 +31,8 @@ const ForgotPassword = () => {
                     </div>
                     <button type="submit" className="btn btn-primary">Submit</button>
                 </form> :
-                <div>Reset password link has been sent to your email address</div>
+                <div className="alert alert-success">
+                    <strong>Reset password email sent Successfully</strong></div>
             }
         </div>
     )
