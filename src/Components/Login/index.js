@@ -17,7 +17,7 @@ const Login =() =>{
      try{
       event.preventDefault(); // to prevant data and state,to carry the event- entire function execution
      // console.log('Logging in');
-      const response= await axios.post(`${process.env.REACT_APP_BASE_URL}/signin`,{...userCred},{withCredentials:true});
+      const response= await axios.post(`${process.env.REACT_APP_BASE_URL}/signin`,{...userCred});
       if(response){
         navigate('/email');
       }
@@ -37,24 +37,9 @@ const Login =() =>{
       </div>
       <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
         <form onSubmit={handleLogin}>
-          <div className="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
-            <p className="lead fw-normal mb-0 me-3">Sign in with</p>
-            <button type="button" className="btn btn-primary btn-floating mx-1">
-              <i className="fab fa-facebook-f"></i>
-            </button>
+          
 
-            <button type="button" class="btn btn-primary btn-floating mx-1">
-              <i class="fab fa-twitter"></i>
-            </button>
-
-            <button type="button" class="btn btn-primary btn-floating mx-1">
-              <i class="fab fa-linkedin-in"></i>
-            </button>
-          </div>
-
-          <div class="divider d-flex align-items-center my-4">
-            <p class="text-center fw-bold mx-3 mb-0">Or</p>
-          </div>
+         
 
           
           <div class="form-outline mb-4">
@@ -74,12 +59,7 @@ const Login =() =>{
 
           <div class="d-flex justify-content-between align-items-center">
           
-            <div class="form-check mb-0">
-              <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
-              <label class="form-check-label" for="form2Example3">
-                Remember me
-              </label>
-            </div>
+           
             <a href="/forgotPassword" class="text-body">Forgot password?</a>
           </div>
 

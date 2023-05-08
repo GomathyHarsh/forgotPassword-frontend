@@ -22,6 +22,7 @@ function App() {
           
     <Routes>
       <Route element={<PublicRoutes/>}>
+      <Route path='/' element={<Login/>} />
       <Route path='/login' element={<Login/>} />
       <Route path='/register' element={<Register/>} />
       <Route path='/forgotPassword' element={<ForgotPassword/>} />
