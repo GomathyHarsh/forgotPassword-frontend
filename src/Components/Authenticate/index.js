@@ -6,7 +6,7 @@ import { useCookies } from 'react-cookie';
 
 
 
-const Email = () => {
+const Authenticate = () => {
     const navigate = useNavigate();
     const [cookie, setCookie, removeCookie] = useCookies(['accessToken']);
     const handleLogout = async () => {
@@ -21,11 +21,10 @@ const Email = () => {
 
     return (
         <div>
-         <div className="nav navbar-nav navbar-right">
-            <button onClick={handleLogout}>Logout</button>
-            </div>
+            <p>Welcome To Athentication Tool</p>
+            <button type="button" onClick={handleLogout} class="btn btn-danger">Logout</button>
         </div>
     )
 }
-export default Email;
+export default Authenticate;
 

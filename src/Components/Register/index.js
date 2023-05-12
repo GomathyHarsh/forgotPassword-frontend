@@ -59,7 +59,7 @@ const Register = () =>{
                       </div>
       
                       <div className="form-outline mb-4">
-                        <input type="password" id="form3Example4cg" value={userDetails.mobileNumber} className="form-control form-control-lg" 
+                        <input type="phone" id="form3Example4cg" value={userDetails.mobileNumber} className="form-control form-control-lg" 
                         onChange={(e) => handleForm({mobileNumber: e.target.value})}/>
                         <label className="form-label" for="form3Example4cg">Phone No</label>
                       </div>

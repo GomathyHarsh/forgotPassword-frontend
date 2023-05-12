@@ -10,7 +10,7 @@ const useFindUser = () =>{
     const getUser = async () =>{
         
        try{
-        const response= await axios.get(`${process.env.REACT_APP_BASE_URL}/user`, {withCredentials:true});
+        const response= await axios.get(`${process.env.REACT_APP_BASE_URL}/user`);
             if(response.data.success){
                 console.log('Response:',response.data);
                 setUser(response.data.user);
@@ -25,7 +25,7 @@ const useFindUser = () =>{
 
     useEffect(()=>{
         setLoading(true);
-        getUser();
+       // getUser();
        
     },[]);
    return [user,setUser,loading];

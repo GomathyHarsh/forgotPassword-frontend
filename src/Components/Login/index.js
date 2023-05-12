@@ -19,7 +19,7 @@ const Login =() =>{
      // console.log('Logging in');
       const response= await axios.post(`${process.env.REACT_APP_BASE_URL}/signin`,{...userCred});
       if(response){
-        navigate('/email');
+        navigate('/auth');
       }
       
      }catch(error){

@@ -5,7 +5,7 @@ import useFindUser from "./Hooks/useFindUser";
 
 import Login from "./Components/Login";
 import Register from "./Components/Register";
-import Email from "./Components/Email";
+import Authenticate from "./Components/Authenticate";
 import PublicRoutes from "./Routes/PublicRoutes";
 import PrivateRoutes from "./Routes/PrivateRoutes";
 import ResetPassword from "./Components/ResetPassword";
@@ -30,7 +30,7 @@ function App() {
       
       </Route>
       <Route element={<PrivateRoutes/>}>
-      <Route path='/email' element={<Email/>} />
+      <Route path='/auth' element={<Authenticate/>} />
       </Route>
      
 

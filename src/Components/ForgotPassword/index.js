@@ -12,8 +12,10 @@ const ForgotPassword = () => {
         try {
             event.preventDefault();
             const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/forgotPassword`, { email: email });
+           console.log(response);
             if (response) {
                 setIsEmailSent(true);
+                alert("Reset link sent your email")
             }
         } catch (error) {
             console.log('Error: ', error);
@@ -31,8 +33,7 @@ const ForgotPassword = () => {
                     </div>
                     <button type="submit" className="btn btn-primary">Submit</button>
                 </form> :
-                <div className="alert alert-success">
-                    <strong>Reset password email sent Successfully</strong></div>
+                <div>Reset password link has been sent to your email address</div>
             }
         </div>
     )
