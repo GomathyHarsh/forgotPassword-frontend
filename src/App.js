@@ -10,7 +10,7 @@ import PublicRoutes from "./Routes/PublicRoutes";
 import PrivateRoutes from "./Routes/PrivateRoutes";
 import ResetPassword from "./Components/ResetPassword";
 import ForgotPassword from "./Components/ForgotPassword";
-import Header from "./Components/Header";
+
 function App() {
   const [user,setUser,loading] = useFindUser();
 
@@ -18,7 +18,7 @@ function App() {
     <UserContext.Provider value={{user,loading}}>
         <div >
 
-          <div><Header/></div>
+          
           
     <Routes>
       <Route element={<PublicRoutes/>}>
